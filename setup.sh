@@ -11,7 +11,7 @@ func_pause() {
     read -p "$*"
 }
 
-zfunc_apt-get() {
+func_apt-get() {
     sudo apt-get install streamer
 }
 
