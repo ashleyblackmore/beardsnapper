@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# BEARDSNAPPER
+# ~BEARDSNAPPER~
 #
 # Idea taken from Víctor Martínez: https://github.com/knoopx
 # Find this script on github at https://github.com/ashleyblackmore/beardsnapper
