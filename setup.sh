@@ -3,6 +3,7 @@
 # ~BEARDSNAPPER~
 #
 # Idea taken from Víctor Martínez: https://github.com/knoopx
+# Incorporates changes by iHiD (https://gist.github.com/3207743)
 # Find this script on github at https://github.com/ashleyblackmore/beardsnapper
 # Warning: this has only been tested on Ubuntu!
 

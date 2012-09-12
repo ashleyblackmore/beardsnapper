@@ -124,4 +124,10 @@ This script will create a hook that will attempt to take a photo from your webca
 your making a git commit. It will attempt to install streamer. Obviously git and bash
 are prerequisites for this to work.
 
-It has only been tested on Ubuntu thus far!
+Idea taken from Víctor Martínez: https://github.com/knoopx
+Incorporates changes by iHiD (https://gist.github.com/3207743)
+Find this script on github at https://github.com/ashleyblackmore/beardsnapper
+
+It has only been tested on Ubuntu thus far! Currently leaves debug output on command line,
+despite attempts to adjust for quiet output.
+
