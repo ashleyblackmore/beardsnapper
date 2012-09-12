@@ -7,11 +7,11 @@
 # Find this script on github at https://github.com/ashleyblackmore/beardsnapper
 # Warning: this has only been tested on Ubuntu!
 
-function pause() {
+func_pause() {
     read -p "$*"
 }
 
-func_apt-get() {
+zfunc_apt-get() {
     sudo apt-get install streamer
 }
 
@@ -37,7 +37,7 @@ echo
 echo 'If your camera resolution is not 1280x720, please change it in this script before continuing!'
 echo
 echo 'Additionally, this script _may_ require sudo/root user privilege, in order to install streamer.'
-pause 'Press [Enter] key to continue...'
+func_pause 'Press [Enter] key to continue...'
 
 if haveProg apt-get ; then func_apt-get
 elif haveProg pacman ; then func_pacman
