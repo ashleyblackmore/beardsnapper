@@ -53,7 +53,7 @@ touch $bsnap
 echo -e '#!/bin/bash' > $bsnap
 echo -e 'forked_image () {' >> $bsnap
 echo -e '    mkdir -p ~/Pictures/beardsnaps' >> $bsnap
-echo -e '    streamer -s 1280x720 -c /dev/video0 -b 16 -o ~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg &' >> $bsnap
+echo -e '    streamer -q -s 1280x720 -c /dev/video0 -b 16 -o ~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg &' >> $bsnap
 echo -e '}' >> $bsnap
 echo -e '' >> $bsnap
 echo -e 'forked_image &' >> $bsnap
