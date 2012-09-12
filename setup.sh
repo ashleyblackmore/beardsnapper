@@ -30,8 +30,12 @@ haveProg() {
     [ -x "$(which $1)" ]
 }
 
-echo 'If your camera resolution is not 1280x720, please change it in the script before continuing!'
-echo 'Additionally, you may require root user privilege to install streamer.'
+echo 'WARNING: This will append to the end of your post-commit file, if it already exists. Back out'
+echo 'now if you do not want this to occur.'
+echo
+echo 'If your camera resolution is not 1280x720, please change it in this script before continuing!'
+echo
+echo 'Additionally, this script _may_ require sudo/root user privilege, in order to install streamer.'
 pause 'Press [Enter] key to continue...'
 
 if haveProg apt-get ; then func_apt-get
@@ -39,12 +43,11 @@ elif haveProg pacman ; then func_pacman
 elif haveProg yum ; then func_yum
 elif haveProg up2date ; then func_up2date
 else
-    echo 'No package manager found!'
-    exit 2
+    echo 'No package manager found. Please install streamer before executing this script again.'
 fi
 
 mkdir -p ~/.git_templates/hooks
-bsnap=~/.git_templates/hooks/beardsnapper
+bsnap=~/.git_templates/hooks/post-commit
 touch $bsnap
 
 echo -e '#!/bin/bash' > $bsnap

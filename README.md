@@ -119,3 +119,9 @@ WWKW###jLDftiii;iGiiitGt;;;tG .  .                                 .#K,t;;;;;;;;
 WWWW##GjLGLtti;iijiiiiGti;;jG.....                                 .#W;t;;;;;;;;;i;;;;i;iiiiiittttii
 WWKW##itLDEftiiKjfiiitDji;;jL:.....  ....                          .##;ji;;;;;;i;ii;i;;iiiiiiitttiii
 </pre>
+
+This script will create a hook that will attempt to take a photo from your webcam upon
+your making a git commit. It will attempt to install streamer. Obviously git and bash
+are prerequisites for this to work.
+
+It has only been tested on Ubuntu thus far!
