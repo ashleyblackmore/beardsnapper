@@ -131,3 +131,4 @@ Find this script on github at https://github.com/ashleyblackmore/beardsnapper
 It has only been tested on Ubuntu thus far! Currently leaves debug output on command line,
 despite attempts to adjust for quiet output.
 
+[![endorse](http://api.coderwall.com/ashleyblackmore/endorsecount.png)](http://coderwall.com/ashleyblackmore)
