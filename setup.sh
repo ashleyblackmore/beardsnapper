@@ -61,4 +61,4 @@ echo -e 'forked_image &' >> $bsnap
 
 chmod +x $bsnap
 
-git config --global init.templatedir '~/.git_templates'
+git config --global init.templatedir '~/.git'
