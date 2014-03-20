@@ -47,8 +47,8 @@ else
     echo 'No package manager found. Please install streamer before executing this script again.'
 fi
 
-mkdir -p ~/.git_templates/hooks
-bsnap=~/.git_templates/hooks/post-commit
+mkdir -p ~/.git/hooks
+bsnap=~/.git/hooks/post-commit
 touch $bsnap
 
 echo -e '#!/bin/bash' > $bsnap
