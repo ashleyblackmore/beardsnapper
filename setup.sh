@@ -55,12 +55,12 @@ echo -e 'forked_image () {' >> $BSNAP
 echo -e '    mkdir -p ~/Pictures/beardsnaps' >> $BSNAP
 echo -e '    PICTURE_NAME=~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg' >> $BSNAP
 echo -e '    streamer -q -s 1280x720 -c /dev/video0 -b 16 -o $PICTURE_NAME &' >> $BSNAP
-echo -e '    set -x' >> $BSNAP
 echo -e '    echo "Beardsnap saved to: " $PICTURE_NAME' >> $BSNAP
-echo -e '    set +x' >> $BSNAP
 echo -e '}' >> $BSNAP
 echo -e '' >> $BSNAP
+echo -e 'set -x' >> $BSNAP
 echo -e 'forked_image &' >> $BSNAP
+echo -e 'set +x' >> $BSNAP
 
 chmod +x $BSNAP
 
