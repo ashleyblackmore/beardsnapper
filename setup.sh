@@ -16,7 +16,7 @@ func_apt-get() {
 }
 
 func_pacman() {
-    pacman -Syu streamer
+    sudo pacman -Syu streamer
 }
 
 func_yum() {
