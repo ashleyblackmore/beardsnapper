@@ -50,7 +50,7 @@ mkdir -pv ~/.git/hooks/post-commit.d/
 BSNAP=~/.git/hooks/post-commit.d/beardsnapper
 touch $BSNAP
 
-echo -e '#!/bin/sh' > $BSNAP
+echo -e '#!/bin/bash' > $BSNAP
 echo -e 'forked_image () {' >> $BSNAP
 echo -e '    mkdir -p ~/Pictures/beardsnaps' >> $BSNAP
 echo -e '    PICTURE_NAME=~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg' >> $BSNAP
