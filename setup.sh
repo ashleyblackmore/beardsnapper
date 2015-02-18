@@ -31,12 +31,11 @@ haveProg() {
     [ -x "$(which $1)" ]
 }
 
-echo 'WARNING: This will append to the end of your post-commit file, if it already exists. Back out'
-echo 'now if you do not want this to occur.'
+echo 'WARNING: this will make a new git hooks dir - back out now if you do not want this to occur.'
 echo
 echo 'If your camera resolution is not 1280x720, please change it in this script before continuing!'
 echo
-echo 'Additionally, this script _may_ require sudo/root user privilege, in order to install streamer.'
+echo 'Additionally, this script requires sudo/root user privilege, in order to install streamer.'
 func_pause 'Press [Enter] key to continue...'
 
 if haveProg apt-get ; then func_apt-get
