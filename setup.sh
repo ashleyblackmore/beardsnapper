@@ -33,7 +33,7 @@ haveProg() {
 
 echo 'WARNING: this will make a new git hooks dir - back out now if you do not want this to occur.'
 echo
-echo 'If your camera resolution is not 1280x720, please change it in this script before continuing!'
+echo 'If your camera resolution is not 1920x1080, please change it in this script before continuing!'
 echo
 echo 'Additionally, this script requires sudo/root user privilege, in order to install streamer.'
 func_pause 'Press [Enter] key to continue...'
@@ -54,8 +54,9 @@ echo -e '#!/bin/bash -x' > $BSNAP
 echo -e 'forked_image () {' >> $BSNAP
 echo -e '    mkdir -p ~/Pictures/beardsnaps' >> $BSNAP
 echo -e '    PICTURE_NAME=~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg' >> $BSNAP
-echo -e '    streamer -q -s 1280x720 -c /dev/video0 -b 16 -o $PICTURE_NAME &' >> $BSNAP
-echo -e '    echo "Beardsnap saved to: " $PICTURE_NAME' >> $BSNAP
+echo -e '    export BSNAP_IMAGE_DIR=/media/ablackmore/beardsnaps' >> $BSNAP
+echo -e '    streamer -q -s 1920x1080 -c /dev/video0 -j 100 -b 16 -o $BSNAP_IMAGE_DIR/$(date +%s)_$(basename $PWD).jpeg &' >> $BSNAP
+echo -e '    echo "Beardsnap saved to $BSNAP_IMAGE_DIR/"' >> $BSNAP
 echo -e '}' >> $BSNAP
 echo -e '' >> $BSNAP
 echo -e 'set -x' >> $BSNAP
