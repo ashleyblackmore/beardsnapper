@@ -77,7 +77,6 @@ forked_image () {
     echo "Beardsnap saved to \$BSNAP_IMAGE_DIR/"
 }
 
-set -x
 forked_image &
 ### beardsnapper hook (end) ###
 EOF
