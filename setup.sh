@@ -69,12 +69,12 @@ BSNAP_HOOK=$(cat <<EOF
 ### beardsnapper hook (begin) ###
 # make the image dir
 BSNAP_IMAGE_DIR=~/beardsnaps
-mkdir -p $BSNAP_IMAGE_DIR
+mkdir -p \$BSNAP_IMAGE_DIR
 
 forked_image () {
     # take a picture from the webcam
-    streamer -q -s 1920x1080 -c /dev/video0 -j 100 -b 16 -o $BSNAP_IMAGE_DIR/$(date +%s)_$(basename $PWD).jpeg &
-    echo "Beardsnap saved to $BSNAP_IMAGE_DIR/"
+    streamer -q -s 1920x1080 -c /dev/video0 -j 100 -b 16 -o \$BSNAP_IMAGE_DIR/$(date +%s)_$(basename $PWD).jpeg &
+    echo "Beardsnap saved to \$BSNAP_IMAGE_DIR/"
 }
 
 set -x
