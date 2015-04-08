@@ -52,9 +52,8 @@ touch $BSNAP
 
 echo -e '#!/bin/bash -x' > $BSNAP
 echo -e 'forked_image () {' >> $BSNAP
-echo -e '    mkdir -p ~/Pictures/beardsnaps' >> $BSNAP
-echo -e '    PICTURE_NAME=~/Pictures/beardsnaps/$(date +%s)_$(basename $PWD).jpeg' >> $BSNAP
-echo -e '    export BSNAP_IMAGE_DIR=/media/ablackmore/beardsnaps' >> $BSNAP
+echo -e '    export BSNAP_IMAGE_DIR=/media/$USER/beardsnaps' >> $BSNAP
+echo -e '    mkdir -p $BSNAP_IMAGE_DIR' >> $BSNAP
 echo -e '    streamer -q -s 1920x1080 -c /dev/video0 -j 100 -b 16 -o $BSNAP_IMAGE_DIR/$(date +%s)_$(basename $PWD).jpeg &' >> $BSNAP
 echo -e '    echo "Beardsnap saved to $BSNAP_IMAGE_DIR/"' >> $BSNAP
 echo -e '}' >> $BSNAP
